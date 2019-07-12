@@ -6,7 +6,11 @@ import { AuthService } from './auth.service';
 @Component({
   selector: 'app-signup',
   template: `
+    <div style="text-align:left">
+      <button><a routerLink='/login'><img src="../assets/left-arrow.png">Voltar</a></button>
+    </div>
   <div style="text-align:center">
+    <img src="../assets/add%20(2).png">
     <h1>
       Cadastre-se
     </h1>

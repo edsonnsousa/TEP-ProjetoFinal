@@ -7,42 +7,32 @@ import { AuthService } from './auth.service';
   selector: 'app-login',
   template: `
 
-<!--    <div class="login-page">-->
-<!--      <div class="form">-->
-<!--        <form class="register-form">-->
-<!--          <input #username type='text' placeholder='Usuario1'/>-->
-<!--          <input #password type='password' placeholder='Senha'/>-->
-<!--          <input type="text" placeholder="email address"/>-->
-<!--          <button>create</button>-->
-<!--          <p class="message">Already registered? <a href="#">Sign In</a></p>-->
-<!--        </form>-->
-<!--        <form class="login-form">-->
-<!--          <input #username type='text' placeholder='Usuario2'/>-->
-<!--          <input #password type='password' placeholder='Senha'/>-->
-<!--          <button (click)="login(username.value, password.value)">Entrar</button>-->
-<!--          <p class="message">Not registered? <a href="#">Criar conta</a></p>-->
-<!--          <p>{{ error?.message }}</p>-->
-<!--          <p *ngIf="error">{{ error?.error | json }}</p>-->
-<!--        </form>-->
-<!--      </div>-->
-<!--    </div>-->
-    
-  <div style="text-align:center">
-    <h1>
-      Bem-vindo!
-    </h1>
-  </div>
-  <div style="text-align:center">
-    <input #username type='text' placeholder='Usuario'>
-    <br/>
-    <input #password type='password' placeholder='Senha'>
-    <br/>
-    <button (click)="login(username.value, password.value)">Entrar</button>
-    <p>{{ error?.message }}</p>
-    <p *ngIf="error">{{ error?.error | json }}</p>
-  </div>
-    
-    
+    <div style="text-align:center">
+      <h1>
+        Bem-vindo!
+      </h1>
+    </div>
+    <div style="text-align:center">
+      
+      <h4>Usuário
+        <img src="../assets/usuario.png">
+      </h4>
+      <input #username type='text' placeholder='Usuario'>
+      <br/>
+      <br/>
+      <h4>Senha
+        <img src="../assets/senha.png">
+      </h4>
+      <input #password type='password' placeholder='Senha'>
+      <br/>
+      <button (click)="login(username.value, password.value)">Entrar</button>
+      <br/>
+      <button><a routerLink='/signup'>Cadastre-se</a></button>
+      <p>{{ error?.message }}</p>
+      <p *ngIf="error">{{ error?.error | json }}</p>
+    </div>
+
+
   `
 })
 export class LoginComponent implements OnInit {
